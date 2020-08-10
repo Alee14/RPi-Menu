@@ -37,6 +37,8 @@ btnBG = "#8c8c8c"
 btnABG = "#666666"
 btnBD = 0
 btnRelief = "flat"
+labelFont = tkFont.Font(size=15, weight="bold")
+btnFont = tkFont.Font(size=12, weight="bold")
 
 # Functions
 def launchDesktop():
@@ -62,7 +64,6 @@ def launchKodi():
     quit()
 
 # Labels
-labelFont = tkFont.Font(size=15)
 varWelcome = StringVar()
 labelWelcome = Label( root, textvariable=varWelcome, font=labelFont, bg="#4d4d4d", fg="white")
 varWelcome.set("Welcome to Raspberry Pi OS!\nWhere do you want to go?\n")
@@ -72,7 +73,6 @@ labelCopyright = Label( root, textvariable=varCopyright, font=labelFont, bg="#4d
 varCopyright.set("(C) Copyright 2020, Andrew Lee. Licensed with GPL-3.0\nhttps://alee14.me")
 
 # Buttons
-btnFont = tkFont.Font(size=12, weight="bold")
 btnDesktop = Button(root, text = 'Desktop', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDesktop) 
 btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDashboard) 
 btnRetroPie = Button(root, text = 'RetroPie', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchRetroPie) 
