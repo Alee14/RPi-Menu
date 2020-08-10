@@ -41,6 +41,7 @@ def launchDashboard():
     quit()
 def launchRetroPie():
     print("Launching RetroPie")
+    # TODO: Fix this
     os.system("emulationstation")
     quit()
 def launchSteam():
