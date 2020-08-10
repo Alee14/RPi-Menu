@@ -23,6 +23,7 @@ from tkinter import font as tkFont
 root = tkinter.Tk()
 root.attributes('-fullscreen', True)
 root.title("Startup GUI")
+root['background']='#4d4d4d'
 print("RPi Menu Copyright (C) 2020 Andrew Lee\nThis program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\nThis is free software, and you are welcome to redistribute it\nunder certain conditions; type `show c' for details.\n")
 
 print("Starting Startup GUI")
@@ -54,20 +55,20 @@ def launchKodi():
 # Labels
 labelFont = tkFont.Font(size=15)
 varWelcome = StringVar()
-labelWelcome = Label( root, textvariable=varWelcome, font=labelFont)
-varWelcome.set("Welcome to Raspberry Pi OS!\nWhere do you want to go?")
+labelWelcome = Label( root, textvariable=varWelcome, font=labelFont, bg="#4d4d4d", fg="white")
+varWelcome.set("Welcome to Raspberry Pi OS!\nWhere do you want to go?\n")
 
 varCopyright = StringVar()
-labelCopyright = Label( root, textvariable=varCopyright, font=labelFont)
+labelCopyright = Label( root, textvariable=varCopyright, font=labelFont, bg="#4d4d4d", fg="white")
 varCopyright.set("(C) Copyright 2020, Andrew Lee. Licensed with GPL-3.0\nhttps://alee14.me")
 
 # Buttons
-btnFont = tkFont.Font(size=12)
-btnDesktop = Button(root, text = 'Desktop', width=60, height=3, font=btnFont, command = launchDesktop) 
-btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=60, height=3, font=btnFont, command = launchDashboard) 
-btnRetroPie = Button(root, text = 'RetroPie', width=60, height=3, font=btnFont, command = launchRetroPie) 
-btnSteamLink = Button(root, text = 'Steam Link', width=60, height=3, font=btnFont, command = launchSteam)
-btnKodi = Button(root, text = 'Kodi', width=60, height=3, font=btnFont, command = launchKodi) 
+btnFont = tkFont.Font(size=12, weight="bold")
+btnDesktop = Button(root, text = 'Desktop', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchDesktop) 
+btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchDashboard) 
+btnRetroPie = Button(root, text = 'RetroPie', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchRetroPie) 
+btnSteamLink = Button(root, text = 'Steam Link', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchSteam)
+btnKodi = Button(root, text = 'Kodi', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", relief="flat", bd=0, command = launchKodi) 
 
 # Add the stuff
 labelWelcome.pack()
