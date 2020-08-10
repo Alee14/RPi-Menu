@@ -1,0 +1,73 @@
+ --disable-quic --enable-tcp-fast-open --ppapi-flash-path=/usr/lib/chromium-browser/libpepflashplayer.so --ppapi-flash-args=enable_stagevideo_auto=0 --ppapi-flash-version=
+Already up to date.
+Starting all mycroft-core services
+Initializing...
+Starting background service bus
+CAUTION: The Mycroft bus is an open websocket with no built-in security
+         measures.  You are responsible for protecting the local port
+         8181 with a firewall as appropriate.
+Starting background service skills
+Starting background service audio
+Starting background service voice
+Starting background service enclosure
+libEGL warning: DRI2: failed to authenticate
+[27481:27481:0810/131120.842912:ERROR:sandbox_linux.cc(369)] InitializeSandbox() called with multiple threads in process gpu-process.
+[27406:27685:0810/131122.139630:ERROR:object_proxy.cc(632)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[27406:27685:0810/131122.142201:ERROR:object_proxy.cc(632)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[27406:27685:0810/131122.144501:ERROR:object_proxy.cc(632)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[27563:7:0810/131122.277013:ERROR:command_buffer_proxy_impl.cc(124)] ContextResult::kTransientFailure: Failed to send GpuChannelMsg_CreateCommandBuffer.
+[27563:1:0810/131125.825083:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131125.832369:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131125.838219:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131125.840087:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+Fontconfig error: Cannot load default config file
+[27563:1:0810/131139.590347:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131159.322389:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131159.324716:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131159.615197:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27563:1:0810/131200.740871:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[27406:27406:0810/131351.482177:ERROR:event_router.cc(709)] Event dispatched while shutting down extensions browser client.
+Stopping all mycroft-core services
+Stopping skills (27457)...stopped.
+Stopping audio (27460)...stopped.
+Stopping speech (27463)...stopped.
+Stopping enclosure (27466)...stopped.
+Stopping messagebus.service (27452)...stopped.
+unclutter: someone created a sub-window to my sub-window! giving up
+ --disable-quic --enable-tcp-fast-open --ppapi-flash-path=/usr/lib/chromium-browser/libpepflashplayer.so --ppapi-flash-args=enable_stagevideo_auto=0 --ppapi-flash-version=
+Already up to date.
+Starting all mycroft-core services
+Initializing...
+Starting background service bus
+CAUTION: The Mycroft bus is an open websocket with no built-in security
+         measures.  You are responsible for protecting the local port
+         8181 with a firewall as appropriate.
+Starting background service skills
+Starting background service audio
+Starting background service voice
+Starting background service enclosure
+libEGL warning: DRI2: failed to authenticate
+[1243:1243:0810/155100.335101:ERROR:sandbox_linux.cc(369)] InitializeSandbox() called with multiple threads in process gpu-process.
+[1170:1553:0810/155106.086352:ERROR:object_proxy.cc(632)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1170:1553:0810/155106.090959:ERROR:object_proxy.cc(632)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1170:1553:0810/155106.094759:ERROR:object_proxy.cc(632)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1415:1:0810/155114.977184:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155114.999432:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155115.012081:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155115.024488:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+Fontconfig error: Cannot load default config file
+[1415:1:0810/155206.111906:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155209.897864:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155209.899350:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155219.677009:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+[1415:1:0810/155219.679420:ERROR:child_process_sandbox_support_impl_linux.cc(81)] FontService unique font name matching request did not receive a response.
+Stopping all mycroft-core services
+Stopping skills (1211)...failed to stop.
+  Killing skills (1211)...killed.
+Stopping audio (1214)...stopped.
+Stopping speech (1217)...failed to stop.
+  Killing speech (1217)...killed.
+Stopping enclosure (1220)...stopped.
+Stopping messagebus.service (1208)...stopped.
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0.0"
+      after 1588 requests (1588 known processed) with 2 events remaining.
