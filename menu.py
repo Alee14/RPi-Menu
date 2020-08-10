@@ -30,6 +30,14 @@ print("Starting Startup GUI")
 
 print("Tkinter Version:" , tkinter.TkVersion)
 
+# Variables
+btnSizeW = 60
+btnSizeH = 3
+btnBG = "#8c8c8c"
+btnABG = "#666666"
+btnBD = 0
+btnRelief = "flat"
+
 # Functions
 def launchDesktop():
     print("Launching Desktop")
@@ -65,11 +73,11 @@ varCopyright.set("(C) Copyright 2020, Andrew Lee. Licensed with GPL-3.0\nhttps:/
 
 # Buttons
 btnFont = tkFont.Font(size=12, weight="bold")
-btnDesktop = Button(root, text = 'Desktop', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchDesktop) 
-btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchDashboard) 
-btnRetroPie = Button(root, text = 'RetroPie', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchRetroPie) 
-btnSteamLink = Button(root, text = 'Steam Link', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", bd=0, relief="flat", command = launchSteam)
-btnKodi = Button(root, text = 'Kodi', width=60, height=3, font=btnFont, bg="#8c8c8c", activebackground="#666666", relief="flat", bd=0, command = launchKodi) 
+btnDesktop = Button(root, text = 'Desktop', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDesktop) 
+btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDashboard) 
+btnRetroPie = Button(root, text = 'RetroPie', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchRetroPie) 
+btnSteamLink = Button(root, text = 'Steam Link', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchSteam)
+btnKodi = Button(root, text = 'Kodi', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, relief=btnRelief, bd=btnBD, command = launchKodi) 
 
 # Add the stuff
 labelWelcome.pack()
