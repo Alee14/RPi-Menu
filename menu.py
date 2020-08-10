@@ -25,9 +25,7 @@ root.attributes('-fullscreen', True)
 root.title("Startup GUI")
 root['background']='#4d4d4d'
 print("RPi Menu Copyright (C) 2020 Andrew Lee\nThis program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\nThis is free software, and you are welcome to redistribute it\nunder certain conditions; type `show c' for details.\n")
-
 print("Starting Startup GUI")
-
 print("Tkinter Version:" , tkinter.TkVersion)
 
 # Variables
@@ -66,7 +64,7 @@ def launchKodi():
 # Labels
 varWelcome = StringVar()
 labelWelcome = Label( root, textvariable=varWelcome, font=labelFont, bg="#4d4d4d", fg="white")
-varWelcome.set("Welcome to Raspberry Pi OS!\nWhere do you want to go?\n")
+varWelcome.set("Welcome to Raspberry Pi OS!\nWhere do you want to go today?\n")
 
 varCopyright = StringVar()
 labelCopyright = Label( root, textvariable=varCopyright, font=labelFont, bg="#4d4d4d", fg="white")
