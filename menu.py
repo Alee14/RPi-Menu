@@ -64,7 +64,7 @@ varCopyright.set("(C) Copyright 2020, Andrew Lee. Licensed with GPL-3.0\nhttps:/
 # Buttons
 btnFont = tkFont.Font(size=12)
 btnDesktop = Button(root, text = 'Desktop', width=60, height=3, font=btnFont, command = launchDesktop) 
-btnDashboard = Button(root, text = 'Dashboard', width=60, height=3, font=btnFont, command = launchDashboard) 
+btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=60, height=3, font=btnFont, command = launchDashboard) 
 btnRetroPie = Button(root, text = 'RetroPie', width=60, height=3, font=btnFont, command = launchRetroPie) 
 btnSteamLink = Button(root, text = 'Steam Link', width=60, height=3, font=btnFont, command = launchSteam)
 btnKodi = Button(root, text = 'Kodi', width=60, height=3, font=btnFont, command = launchKodi) 
