@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
     RPi Menu
     Copyright (C) 2020 Andrew Lee
@@ -15,7 +16,6 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-#!/usr/bin/env python3
 import tkinter
 import os
 from tkinter import *
