@@ -49,8 +49,7 @@ def launchDashboard():
     quit()
 def launchRetroPie():
     print("Launching RetroPie")
-    # TODO: Fix this
-    os.system("emulationstation")
+    os.system("sudo su -c \"systemctl stop lightdm ; ttyecho -n /dev/tty1 \"emulationstation ; sudo systemctl start lightdm\"\"")
     quit()
 def launchSteam():
     print("Launching Steam Link")
