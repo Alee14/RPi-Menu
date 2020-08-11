@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-    RPi Menu
+    Raspberry Pi OS Menu: Where do you want to go today?
     Copyright (C) 2020 Andrew Lee
 
     This program is free software: you can redistribute it and/or modify
@@ -20,23 +20,7 @@ import tkinter
 import os
 from tkinter import *
 from tkinter import font as tkFont
-root = tkinter.Tk()
-root.attributes('-fullscreen', True)
-root.title("Startup GUI")
-root['background']='#4d4d4d'
-print("RPi Menu Copyright (C) 2020 Andrew Lee\nThis program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\nThis is free software, and you are welcome to redistribute it\nunder certain conditions; type `show c' for details.\n")
-print("Starting Startup GUI")
-print("Tkinter Version:" , tkinter.TkVersion)
-
-# Variables
-btnSizeW = 60
-btnSizeH = 3
-btnBG = "#8c8c8c"
-btnABG = "#666666"
-btnBD = 0
-btnRelief = "flat"
-labelFont = tkFont.Font(size=15, weight="bold")
-btnFont = tkFont.Font(size=12, weight="bold")
+app = tkinter.Tk()
 
 # Functions
 def launchDesktop():
@@ -49,34 +33,55 @@ def launchDashboard():
     quit()
 def launchRetroPie():
     print("Launching RetroPie")
-    os.system("sudo su -c \"systemctl stop lightdm ; ttyecho -n /dev/tty1 \"emulationstation ; sudo systemctl start lightdm\"\"")
+   # os.system("nohup sudo su -c \"systemctl stop lightdm ; ttyecho -n /dev/tty1 \"emulationstation ; sudo systemctl start lightdm\"\"")
+    #os.system("nohup sudo pkill Xorg ; emulationstation")
+    os.system("bash /home/pi/menu/launchES.sh")
     quit()
 def launchSteam():
     print("Launching Steam Link")
-    os.system("steamlink &")
+    os.system("/usr/bin/steamlink &")
     quit()
 def launchKodi():
     print("Launching Kodi")
-    os.system("kodi &")
+    os.system("/usr/bin/kodi &")
     quit()
+
+# Variables
+appName = "Raspberry Pi OS Menu"
+appBackground = "#4d4d4d"
+btnSizeW = 60
+btnSizeH = 3
+btnBG = "#8c8c8c"
+btnABG = "#666666"
+btnBD = 0
+btnRelief = "flat"
+labelFont = tkFont.Font(size=15, weight="bold")
+btnFont = tkFont.Font(size=12, weight="bold")
+
+print(appName + " Copyright (C) 2020 Andrew Lee\nThis program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\nThis is free software, and you are welcome to redistribute it\nunder certain conditions; type `show c' for details.\n")
+print("Starting " + appName)
+print("Tkinter Version:" , tkinter.TkVersion)
+app.attributes('-fullscreen', True)
+app.title(appName)
+app.configure(bg=appBackground)
 
 # Labels
 varWelcome = StringVar()
-labelWelcome = Label( root, textvariable=varWelcome, font=labelFont, bg="#4d4d4d", fg="white")
+labelWelcome = Label( app, textvariable=varWelcome, font=labelFont, bg=appBackground, fg="white")
 varWelcome.set("Welcome to Raspberry Pi OS!\nWhere do you want to go today?\n")
 
 varCopyright = StringVar()
-labelCopyright = Label( root, textvariable=varCopyright, font=labelFont, bg="#4d4d4d", fg="white")
+labelCopyright = Label( app, textvariable=varCopyright, font=labelFont, bg=appBackground, fg="white")
 varCopyright.set("(C) Copyright 2020, Andrew Lee. Licensed with GPL-3.0\nhttps://alee14.me")
 
 # Buttons
-btnDesktop = Button(root, text = 'Desktop', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDesktop) 
-btnDashboard = Button(root, text = 'Dashboard + Mycroft AI', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDashboard) 
-btnRetroPie = Button(root, text = 'RetroPie', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchRetroPie) 
-btnSteamLink = Button(root, text = 'Steam Link', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchSteam)
-btnKodi = Button(root, text = 'Kodi', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, relief=btnRelief, bd=btnBD, command = launchKodi) 
+btnDesktop = Button(app, text = 'Desktop', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDesktop) 
+btnDashboard = Button(app, text = 'Dashboard + Mycroft AI', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDashboard) 
+btnRetroPie = Button(app, text = 'RetroPie', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchRetroPie) 
+btnSteamLink = Button(app, text = 'Steam Link', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchSteam)
+btnKodi = Button(app, text = 'Kodi', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, relief=btnRelief, bd=btnBD, command = launchKodi) 
 
-# Add the stuff
+# Add the components
 labelWelcome.pack()
 btnDesktop.pack()
 btnDashboard.pack()
@@ -86,4 +91,4 @@ btnKodi.pack()
 labelCopyright.pack()
 
 # Run the app
-root.mainloop()
+app.mainloop()
