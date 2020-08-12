@@ -39,9 +39,9 @@ def launchRetroPie():
     print("Launching RetroPie")
     #os.system("nohup sudo su -c \"systemctl stop lightdm ; ttyecho -n /dev/tty1 \"emulationstation ; sudo systemctl start lightdm\"\"")
     #os.system("nohup sudo pkill Xorg ; emulationstation")
-    #os.system("nohup /home/pi/menu/launchES.sh")
-    msgbox()
-    #quit()
+    os.system("nohup /home/pi/menu/launchES.sh")
+    #msgbox()
+    quit()
 def launchSteam():
     print("Launching Steam Link")
     os.system("/usr/bin/steamlink &")
@@ -49,6 +49,10 @@ def launchSteam():
 def launchKodi():
     print("Launching Kodi")
     os.system("/usr/bin/kodi &")
+    quit()
+def launchCLI():
+    print("Launching CLI")
+    os.system("sudo pkill Xorg")
     quit()
 
 # Variables
@@ -82,17 +86,19 @@ varCopyright.set("(C) Copyright 2020, Andrew Lee. Licensed with GPL-3.0\nhttps:/
 # Buttons
 btnDesktop = Button(app, text = 'Desktop', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDesktop) 
 btnDashboard = Button(app, text = 'Dashboard + Mycroft AI', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchDashboard) 
-btnRetroPie = Button(app, text = 'RetroPie', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchRetroPie) 
+#btnRetroPie = Button(app, text = 'RetroPie', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchRetroPie) 
 btnSteamLink = Button(app, text = 'Steam Link', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, bd=btnBD, relief=btnRelief, command = launchSteam)
 btnKodi = Button(app, text = 'Kodi', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, relief=btnRelief, bd=btnBD, command = launchKodi) 
+btnCLI = Button(app, text = 'Command Line', width=btnSizeW, height=btnSizeH, font=btnFont, bg=btnBG, activebackground=btnABG, relief=btnRelief, bd=btnBD, command = launchCLI) 
 
 # Add the components
 labelWelcome.pack()
 btnDesktop.pack()
 btnDashboard.pack()
-btnRetroPie.pack()
+#btnRetroPie.pack()
 btnSteamLink.pack()
 btnKodi.pack()
+btnCLI.pack()
 labelCopyright.pack()
 
 # Run the app
