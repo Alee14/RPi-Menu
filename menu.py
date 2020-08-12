@@ -20,9 +20,13 @@ import tkinter
 import os
 from tkinter import *
 from tkinter import font as tkFont
+from tkinter import messagebox
 app = tkinter.Tk()
 
 # Functions
+def msgbox():
+    msgboxMessage = messagebox.showinfo(title="Information", message="This option is currently broken.")
+    Label(app, text=msgboxMessage).pack()
 def launchDesktop():
     print("Launching Desktop")
     quit()
@@ -33,10 +37,11 @@ def launchDashboard():
     quit()
 def launchRetroPie():
     print("Launching RetroPie")
-   # os.system("nohup sudo su -c \"systemctl stop lightdm ; ttyecho -n /dev/tty1 \"emulationstation ; sudo systemctl start lightdm\"\"")
+    #os.system("nohup sudo su -c \"systemctl stop lightdm ; ttyecho -n /dev/tty1 \"emulationstation ; sudo systemctl start lightdm\"\"")
     #os.system("nohup sudo pkill Xorg ; emulationstation")
-    os.system("bash /home/pi/menu/launchES.sh")
-    quit()
+    #os.system("nohup /home/pi/menu/launchES.sh")
+    msgbox()
+    #quit()
 def launchSteam():
     print("Launching Steam Link")
     os.system("/usr/bin/steamlink &")
